@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: test.java.playwrightTraditional.BookstoreFlowTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.861 s -- in test.java.playwrightTraditional.BookstoreFlowTest
