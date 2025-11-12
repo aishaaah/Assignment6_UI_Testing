@@ -7,9 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,7 +20,7 @@ jobs:
           java-version: '17'
           cache: maven
 
-      # Installs Playwright browsers *and* required OS packages on Ubuntu
+      # Installs Playwright browsers + required OS packages on Ubuntu
       - name: Install Playwright browsers and deps
         uses: microsoft/playwright-github-action@v1
 
@@ -30,7 +29,7 @@ jobs:
         env:
           CI: true
 
-      # Grab any screenshots/videos if the run fails or succeeds
+      # Grab any screenshots/videos & surefire reports (pass or fail)
       - name: Upload test artifacts
         if: always()
         uses: actions/upload-artifact@v4
